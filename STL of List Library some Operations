@@ -1,0 +1,59 @@
+#include<iostream>
+#include<list>
+using namespace std;
+
+int main()
+{
+    list<int>ll;
+    int option;
+    int n;
+    do{
+        cout<<"Enter the option:";
+        cin>>option;
+        switch(option)
+        {
+           case 1:
+           {
+               cout<<"Enter the data:";
+               cin>>n;
+               ll.push_front(n);
+               break;
+           }
+           case 2:
+           {
+               cout<<"Enter the data:";
+               cin>>n;
+              ll.push_back(n);
+               break;
+           }
+           case 3:
+           {
+              
+               ll.pop_front();
+               break;
+           }
+           case 4:
+           {
+    
+               ll.pop_back();
+               break;
+           }
+           case 5:
+           {
+               for(int val:ll)
+               {
+                   cout<<val<<" ";
+                   
+                   
+               }
+               cout<<endl;
+               break;
+           }
+           default:
+           {
+               cout<<"Choose the correct Option:";
+           }
+        }
+    }while(option!=0);
+    return 0;
+}
